@@ -1,3 +1,124 @@
-body{
-   background-color: #FFFFFF; 
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+
+.playGround {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #8f0b0b 0%, #bd7499 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.playGround .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.playGround .card.open {
+    transform: rotateY(0);
+    background: #4c3b3f;
+    cursor: default;
+}
+
+.playGround .card.show {
+    font-size: 33px;
+}
+
+.playGround .card.match {
+    cursor: default;
+    background: #58191f;
+    font-size: 33px;
+}
+
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+}
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+.popup {
+    background: #02ccba;
+    z-index: 1;
+    display: none;
+    margin: 0 auto;
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+}
+
+.content {
+    padding: 10px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.562);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.close {
+    color: #000;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
 }
